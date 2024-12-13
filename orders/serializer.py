@@ -52,8 +52,7 @@ class OrderSerializer(serializers.ModelSerializer):
             OrderItem.objects.create(
                 order=order,
                 product=product,
-                quantity=quantity,
-                price=item_data['price']
+                quantity=quantity
             )
 
         return order
